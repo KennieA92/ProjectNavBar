@@ -1,0 +1,34 @@
+// Margin & padding classes
+$amountOfSpacers: (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
+
+@each $spacer in $amountOfSpacers {
+  // margin
+  .m-#{$spacer} {
+    margin: calc(#{$spacer}px * 4);
+  }
+
+  .mx-#{$spacer} { // Added mx 
+    margin: 0 calc(#{$spacer}px * 4);
+  }
+
+  .my-#{$spacer} {
+    margin: calc(#{$spacer}px * 4) 0;
+  }
+  // padding
+  .p-#{$spacer} {
+    padding: calc(#{$spacer}px * 4);
+  }
+
+  .px-#{$spacer} { // Added px 
+    padding: 0 calc(#{$spacer}px * 4)
+  }
+
+  .py-#{$spacer} {
+    padding: calc(#{$spacer}px * 4) 0;
+  }
+
+  // gutter
+  .g-#{$spacer} {
+    gap: calc(#{$spacer}px * 4) !important;
+  }
+}

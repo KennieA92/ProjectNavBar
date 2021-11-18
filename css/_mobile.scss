@@ -1,0 +1,116 @@
+// _mobile.scss
+@media(max-width: 760px) {
+
+  @for $i from 1 through $grid-columns {
+    .outer-col-#{$i} {
+      width:100vw;      
+      flex-direction: column; 
+      
+    }
+  }
+
+  @for $i from 1 through $grid-columns {
+    .inner-col-#{$i} {
+      width:100vw;     
+      flex-direction: column; 
+    }
+  }
+  
+  /* Mobile Nav Menu */
+  .burgermenu{
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 40px;
+  color: $secondary-color;
+  }
+
+  header {
+    height: $mobile-height;
+    justify-content: normal;  
+    nav {
+      img{
+      height: $mobile-height;
+    }
+  .nav-menu {
+    z-index: 555555;
+    display: none;
+    background: darken($primary-color, 20%);
+    &.active {
+      display: block;
+    } 
+      a{
+        padding: 15px;
+        width: 100%;
+    }   
+    
+    .nav-menu-item {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      text-align: center;
+      position: static;
+      font-size: 30px;
+      width: 100vw;
+          a{
+            padding: 15px;
+            width: 100%;
+        }           
+        .nav-submenu {    
+          top: auto;
+          left: auto;
+          position: static;
+          display: none;
+          width: 100vw;   
+          background: darken($primary-color, 40%);
+          list-style-type: none;
+         
+          &.active {
+            display: block;
+          }          
+          .nav-submenu-item{
+          display: none;  
+           width: 100%;
+           font-size: 25px;
+           display: flex;
+           justify-content: center;
+         }
+        }
+      } 
+  }
+}
+}
+  main {
+    .slider{
+      .slides {
+          div{
+            height: 95vh;
+          }
+        
+      }
+    }
+    width:100%;
+    max-width:100%;
+    .primary-image-section{
+      display: flex; 
+      flex-direction: column-reverse;
+      height: 100%;
+      img{
+        filter: blur(0px);
+      }
+    }
+    .secondary-image-section {
+      height: 100%;
+      img{
+        filter: blur(0px);
+      }
+    }
+    .tertiary-image-section {
+      height: 100%;
+      img{
+        filter: grayscale(0);
+      }
+    }
+  }
+}

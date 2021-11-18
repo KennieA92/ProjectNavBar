@@ -1,0 +1,47 @@
+// _config.scss
+
+$light-color: #f4f4f4;
+$primary-color: #f4f4f4;
+$secondary-color: #333333;
+$tertiary-color: #092736;
+$accent-color: #ff7011;
+$error-color: #2de9e6;
+/* $light-color: #f4f4f4;
+$primary-color: #6780a8;
+$secondary-color: #092736;
+$tertiary-color: #092736;
+$accent-color: #ff7011;
+$error-color: #2de9e6; */
+
+
+
+// How many columns and gap/gutter spacing in px
+$grid-gutter     :  0px !default;
+$grid-columns    :  12;
+$full-width      :  100%;  // for full width design
+$centered-width  :  80vw;  // for center based on pixel width
+$width-type      :  $full-width;
+
+// Standard header variables
+$mobile-height   :  60px;
+$desktop-height  :  80px;
+
+
+// For-loop to make grid-columns with calc
+@for $col-number from 1 through $grid-columns {
+  .outer-col-#{$col-number} {
+    $col-width: $col-number / $grid-columns;
+    width: calc(100% * #{$col-width} - #{$grid-gutter} * (1 - #{$col-width}));
+    // Dont use padding and margin : use p-1 or mx-1 on HTML element
+    display:flex;
+  }
+}
+
+@for $col-number from 1 through $grid-columns {
+  .inner-col-#{$col-number} {
+    $col-width: $col-number / $grid-columns;
+    width: calc(100% * #{$col-width} - 0px * (1 - #{$col-width}));
+    // Dont use padding and margin : use p-1 or mx-1 on HTML element
+    display:flex;
+  }
+}

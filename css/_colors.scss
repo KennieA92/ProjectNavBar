@@ -1,0 +1,24 @@
+// make classes for own colors
+.primary-color {
+  background-color:$primary-color;
+}
+
+.secondary-color {
+  background-color:$secondary-color;
+}
+
+.tertiary-color {
+  background-color:$tertiary-color;
+}
+
+.accent-color {
+  background-color:$accent-color;
+}
+
+.error-color {
+  background-color:$error-color;
+}
+
+.text--color {
+  color:$light-color;
+}

@@ -1,0 +1,45 @@
+@media(min-width: 760px) {
+nav {
+    img{
+        height: $desktop-height;
+    }
+    .nav-menu {  
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style-type: none;  
+
+    .nav-menu-item {
+    position: relative;
+    display: flex;
+    height: $desktop-height;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      display: block;
+      padding: 30px 25px;
+    }    
+
+    &:hover {
+      .nav-submenu{
+        top: 79px;
+        left: 0;
+        z-index: 5;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: max-content;
+        list-style-type: none;  
+        position: absolute;
+        background-color: lighten($primary-color, 5%);
+        }   
+      }
+    }
+    }    
+  }
+  .slideshow-section-buttons {
+    display: none;
+  }
+}

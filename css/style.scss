@@ -1,0 +1,178 @@
+@import 'config';
+@import 'typography'; // Heeeeyyy, im the typography, and also - luuucy im hooommmee!
+@import 'colors'; // just to be like da cool kids
+@import 'slideshow';
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px; 
+}
+
+
+a {
+  text-decoration: none;
+  color: $secondary-color;
+}
+body {
+  color: $secondary-color ;
+  background-color: $light-color;
+  font-family: $font-stack;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  @import 'dark'; // For dark-mode changes, go to _dark.scss
+}
+
+img {
+  max-width: 100%;
+}
+
+.burgermenu {
+  display: none;
+}
+
+.nav-submenu {
+  display: none;
+}
+
+// Navigation CSS
+header {
+  height: $desktop-height;
+  background-color: $primary-color;
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $grid-gutter;
+  max-width: $width-type; // Change for full width or a set width -> in config file
+  width: $width-type;
+  justify-content: center;
+  nav{    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a {
+      color: $secondary-color;
+      &:hover {
+       color: $accent-color;            
+      }
+    } 
+  }
+}
+
+.secondary-image-section {
+  display: flex;
+  justify-content: center;
+  background-color: $secondary-color;
+  height: 700px;
+  img{
+    filter:blur(5px);
+    width: 100%;
+    object-fit: cover;
+    &:hover{
+      transition: 2s;
+      filter: blur(0px);
+    }
+  }
+  .secondary-textbox{
+    color: $light-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    h1{
+      font-size:2.2rem;
+    }
+    p{
+      font-size: 1.5rem;
+    }
+  }
+}
+.primary-image-section {
+  display: flex;
+  justify-content: center;
+  background-color: $primary-color;
+  height: 700px;
+  img{ 
+    filter:blur(5px);
+    width: 100%;
+    object-fit: cover;
+    &:hover{
+      transition: 2s;
+      filter: blur(0px);
+    }
+  }
+  .primary-textbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: $secondary-color;
+    h1{
+      font-size:2.2rem;
+    }
+    p{
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.tertiary-image-section {
+  display: flex;
+  justify-content: center;
+  background-color: $tertiary-color;
+  height: 700px;
+  img{
+    filter:grayscale(100%);
+    width: 100%;
+    object-fit: cover;
+    &:hover{
+      transition: 5s;
+      filter: grayscale(0%);
+    }
+  }
+  .tertiary-textbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: $light-color;
+    h1{
+      font-size:2.2rem;
+    }
+    p{
+      font-size: 1.5rem;
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $grid-gutter;
+  max-width: $width-type; // Change for full width or a set width -> in config file
+  width: $width-type;
+  justify-content: center;
+  // import pages?
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $grid-gutter;
+  max-width: $width-type; // Change for full width or a set width -> in config file
+  width: $width-type;
+  justify-content: center;
+}
+
+@import 'utilities';
+@import 'buttons';
+@import 'mobile';
+@import 'desktop';
+
+/*
+Author: Kristian Wittrup, 2021
+*/
